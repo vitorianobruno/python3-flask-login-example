@@ -1,0 +1,25 @@
+<html>
+	
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<div class ='contenedor1'>
+		<div class="login">
+			<div class="login-screen">
+				<div class="app-title">
+					<h1>HOME</h1>
+				</div>
+				<div class="login-form">
+					Hello {{username}} !
+				</div><br>
+				<div class="login-form">
+					<a href = "{{url_for('usersList')}}"> Users List </a>
+				</div>
+			</div>
+		</div>
+		<p style="text-align: center;"><a href = "{{url_for('logout')}}"> Logout </a></p>
+	</div>
+</body>
+
+</html>

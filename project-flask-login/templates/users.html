@@ -1,0 +1,24 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>USERS LIST</h1>
+			</div>
+			<div class="login-form">
+				{% for r in users %}
+				<div class="login-field">
+					<p>ID: {{r.id }} Username: {{r.username }} Password: {{r.password }}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<p style="text-align: center;"><a href = "{{url_for('logout')}}"> Logout </a></p>
+</div>
+</body>
+</html>
